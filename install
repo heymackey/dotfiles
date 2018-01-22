@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -e
+echo ''
+
+DOTFILES_ROOT="${HOME}/.dotfiles"
+DOTFILES_REPO="git@github.com:danielmackey/dotfiles.git"
+
+if [[ ! -d ${DOTFILES_ROOT} ]]; then
+  git clone ${DOTFILES_REPO} ${DOTFILES_ROOT}
+fi
+
+cd ${DOTFILES_ROOT}
+
