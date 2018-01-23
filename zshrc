@@ -5,11 +5,16 @@ fi
 
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
-if ! zgen save; then
+if ! zgen saved; then
   echo "Creating a zgen save"
   zgen prezto
   zgen prezto git
   zgen prezto command-not-found
   zgen prezto syntax-highlighting
-  zgen zsh-users/zsh-completions source
+  zgen prezto zsh-users/zsh-completions src
 fi
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -7,6 +7,7 @@
 
 - shell: 
   - [xcode-select --install, Installing xcode tools]
+  - [git submodule update --init --recursive, Installing submodules]
   - [chsh -s /usr/local/bin/zsh, Setting shell to zsh]
 
 - link: 
@@ -20,3 +21,6 @@
     # git
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
+
+    # ruby
+    ~/.gemrc: gemrc
