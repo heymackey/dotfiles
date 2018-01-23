@@ -11,6 +11,7 @@
   - [chsh -s /usr/local/bin/zsh, Setting shell to zsh]
 
 - link: 
+    ~/.scripts: scripts
     # zsh
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
