@@ -1,3 +1,22 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
 - clean: ['~']
-- link: {}
-- shell: []
+
+- shell: 
+  - [xcode-select --install, Installing xcode tools]
+  - [chsh -s /usr/local/bin/zsh, Setting shell to zsh]
+
+- link: 
+    # zsh
+    ~/.zshenv: zshenv
+    ~/.zshrc: zshrc
+    ~/.zgen: zgen
+    ~/.zprezto: prezto
+    ~/.zpreztorc: zpreztorc
+
+    # git
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
