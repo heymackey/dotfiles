@@ -7,3 +7,9 @@
 [submodule "zgen"]
 	path = zgen
 	url = https://github.com/tarjoilija/zgen.git
+[submodule "nodenv"]
+	path = nodenv
+	url = https://github.com/nodenv/nodenv.git
+[submodule "node-build"]
+	path = node-build
+	url = https://github.com/nodenv/node-build.git

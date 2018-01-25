@@ -25,3 +25,7 @@
 
     # ruby
     ~/.gemrc: gemrc
+
+    # node
+    ~/.nodenv: nodenv
+    ~/.nodenv/plugins/node-build: node-build
