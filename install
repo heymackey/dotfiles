@@ -3,8 +3,19 @@
 set -e
 echo ''
 
+echo 'Check for xcode command line tools'
+xcode-select --install
+
+echo 'Setup brew'
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+echo 'Install zsh'
+brew install zsh
+
+echo 'Setup dotfiles'
+
 DOTFILES_ROOT="${HOME}/.dotfiles"
-DOTFILES_REPO="git@github.com:danielmackey/dotfiles.git"
+DOTFILES_REPO="git@github.com:heymackey/dotfiles.git"
 
 if [[ ! -d ${DOTFILES_ROOT} ]]; then
   echo "Cloning repo"
