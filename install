@@ -4,10 +4,20 @@ set -e
 echo ''
 
 echo 'Check for xcode command line tools'
-xcode-select --install
+if [ -n "$(xcode-select -v)" ]; then 
+  echo 'xcode command line tools installed, moving on...'
+else 
+  echo 'xcode not installed'
+  xcode-select --install
+fi
 
-echo 'Setup brew'
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+echo 'Checking for homebrew'
+if ! hash brew; then
+  echo 'brew not installed'
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+  echo 'brew is installed, moving on...'
+fi
 
 echo 'Install zsh'
 brew install zsh
