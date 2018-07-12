@@ -19,8 +19,13 @@ else
   echo 'brew is installed, moving on...'
 fi
 
-echo 'Install zsh'
-brew install zsh
+echo 'Check for brew zsh'
+if brew ls --versions zsh > /dev/null; then
+  echo 'brew zsh found, moving on...'
+else
+  echo 'installing brew zsh'
+  brew install zsh
+fi
 
 echo 'Setup dotfiles'
 

@@ -5,9 +5,14 @@
 
 - clean: ['~']
 
-- shell: 
-  - [xcode-select --install, Installing xcode tools]
+- shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - 
+    description: "Add brew's zsh to known shells"
+    command: "./scripts/shells.sh"
+    stdout: true
+    stderr: true
+    stdin: true
   - [chsh -s /usr/local/bin/zsh, Setting shell to zsh]
 
 - link: 
