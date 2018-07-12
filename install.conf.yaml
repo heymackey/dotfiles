@@ -30,6 +30,8 @@
 
     # ruby
     ~/.gemrc: gemrc
+    ~/.rbenv: rbenv
+    ~/.rbenv/plugins/ruby-build: ruby-build
 
     # node
     ~/.nodenv: nodenv
