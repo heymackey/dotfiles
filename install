@@ -4,9 +4,9 @@ set -e
 echo ''
 
 echo 'Check for xcode command line tools'
-if [ -n "$(xcode-select -v)" ]; then 
+if [ -n "$(xcode-select -v)" ]; then
   echo 'xcode command line tools installed, moving on...'
-else 
+else
   echo 'xcode not installed'
   xcode-select --install
 fi
@@ -43,7 +43,7 @@ DOTBOT_DIR="dotbot"
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-cd "${BASEDIR}/.dotfiles"
+cd $DOTFILES_ROOT
 
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
