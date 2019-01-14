@@ -20,3 +20,7 @@ source "${HOME}/.scripts/aliases.sh"
 COMPLETION_WAITING_DOTS="true"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# exenv
+export PATH="$HOME/.exenv/bin:$PATH"
+if which exenv > /dev/null; then eval "$(exenv init -)"; fi

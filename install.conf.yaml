@@ -7,7 +7,7 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - 
+  -
     description: "Add brew's zsh to known shells"
     command: "./scripts/shells.sh"
     stdout: true
@@ -15,7 +15,7 @@
     stdin: true
   - [chsh -s /usr/local/bin/zsh, Setting shell to zsh]
 
-- link: 
+- link:
     ~/.scripts: scripts
     # zsh
     ~/.zshenv: zshenv
@@ -38,3 +38,7 @@
     ~/.nodenv/plugins/node-build: node-build
     ~/.nodenv/plugins/nodenv-aliases: nodenv-aliases
     ~/.nodenv/plugins/nodenv-update: nodenv-update
+
+    # elixir
+    ~/.exenv: exenv
+    ~/.exenv/plugins/elixir-build: elixir-build

@@ -26,3 +26,9 @@
 [submodule "ruby-build"]
 	path = ruby-build
 	url = https://github.com/rbenv/ruby-build
+[submodule "exenv"]
+	path = exenv
+	url = https://github.com/exenv/exenv.git
+[submodule "elixir-build"]
+	path = elixir-build
+	url = https://github.com/mururu/elixir-build.git
