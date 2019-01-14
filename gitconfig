@@ -1,5 +1,5 @@
 [core]
-  excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore
 [help]
   autocorrect = 1
 [alias]
@@ -9,3 +9,5 @@
 [user]
   name = "Daniel Mackey"
   email = "daniel@danielmackey.com"
+[credential]
+	helper = osxkeychain
