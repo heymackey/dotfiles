@@ -14,6 +14,7 @@
 [submodule "node-build"]
 	path = node-build
 	url = https://github.com/nodenv/node-build.git
+	master = master
 [submodule "nodenv-update"]
 	path = nodenv-update
 	url = https://github.com/nodenv/nodenv-update
